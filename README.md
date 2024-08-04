@@ -22,3 +22,10 @@ How this project was done:
 - Followed Black Sholes Model and understood core concepts of its usage
 - Tried to implement new methods of plotting into the project
 - Searched different repos when needed help in understanding core concepts
+
+## Images
+
+![image](https://github.com/user-attachments/assets/667b7d08-3021-4ae4-bf83-6521da13167a)
+
+
+![image](https://github.com/user-attachments/assets/914d4c34-c48d-4a39-850d-bd0cebe4e00d)
