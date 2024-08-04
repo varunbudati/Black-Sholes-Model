@@ -1,11 +1,21 @@
-# Black-Sholes-Model
+# Black-Scholes Option Pricing Model
 
-This project is to implement the Black Sholes Model by using Python
+## Description
+This project implements the Black-Scholes option pricing model in Python. It provides a comprehensive tool for calculating option prices, Greeks, and implied volatility for European-style options.
 
-About Black Sholes Model:
-The Black-Scholes model is also known as the Black-Scholes-Merton or the BSM model.
-The Black-Scholes model requires five input variables: the strike price of an option, the current stock price, the time to expiration, the risk-free rate, and the volatility.
-The standard BSM model is only used to price European options because it doesn't take into account that American options could be exercised before the expiration date.
+## Features
+- Calculate call and put option prices
+- Compute option Greeks (Delta, Gamma, Vega, Theta, Rho)
+- Calculate implied volatility
+- Visualize the implied volatility smile
+- User-friendly command-line interface for input
+
+## Requirements
+- Python 3.7+
+- NumPy
+- Pandas
+- Matplotlib
+- SciPy
 
 How this project was done:
 - Read Theory and learnt different python libraries from "Python for Data Analysis: Data Wrangling with pandas, NumPy, and Jupyter 3rd Edition"
