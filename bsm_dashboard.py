@@ -9,6 +9,9 @@ from scipy.stats import norm
 from scipy import optimize
 import dash_bootstrap_components as dbc
 
+
+
+
 # Constants
 DAYS_PER_YEAR = 365.0
 
@@ -85,7 +88,7 @@ app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
 def create_layout():
     return dbc.Container([
         dbc.Row([
-            dbc.Col(html.H1("Black-Scholes Model Dashboard", className="text-center mb-4"), width=12)
+            dbc.Col(html.H1("Black-Scholes Option's Pricing Calculator", className="text-center mb-4"), width=12)
         ]),
 
         dbc.Row([
@@ -402,6 +405,9 @@ def calculate_implied_volatility(n_clicks, stock_price, strike_price, maturity_t
         return f"Implied Volatility: {implied_vol:.2%}"
     except:
         return "Could not calculate implied volatility. Please check your inputs."
+
+
+
 
 if __name__ == '__main__':
     app.run_server(debug=True)

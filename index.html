@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black-Scholes Option's Pricing Calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-center mb-4">Black-Scholes Option's Pricing Calculator</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="custom-control custom-switch mb-3">
+                    <input type="checkbox" class="custom-control-input" id="theme-switch">
+                    <label class="custom-control-label" for="theme-switch">Dark Mode</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-header">Input Parameters</div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="stock-price">Stock Price:</label>
+                            <input type="number" id="stock-price" class="form-control" value="100" min="0" step="0.01">
+                        </div>
+                        <div class="form-group">
+                            <label for="strike-price">Strike Price:</label>
+                            <input type="number" id="strike-price" class="form-control" value="100" min="0" step="0.01">
+                        </div>
+                        <div class="form-group">
+                            <label for="maturity-time">Time to Maturity (days):</label>
+                            <input type="number" id="maturity-time" class="form-control" value="30" min="1" step="1">
+                        </div>
+                        <div class="form-group">
+                            <label for="risk-free-rate">Risk-free Rate (%):</label>
+                            <input type="number" id="risk-free-rate" class="form-control" value="5" min="0" max="100" step="0.1">
+                        </div>
+                        <div class="form-group">
+                            <label for="volatility">Volatility (%):</label>
+                            <input type="number" id="volatility" class="form-control" value="20" min="0" max="100" step="0.1">
+                        </div>
+                        <button id="calculate-button" class="btn btn-primary mt-4">Calculate</button>
+                    </div>
+                </div>
+
+                <div class="card mb-4">
+                    <div class="card-header">Option Prices</div>
+                    <div class="card-body">
+                        <div id="option-prices"></div>
+                    </div>
+                </div>
+
+                <div class="card mb-4">
+                    <div class="card-header">Greeks</div>
+                    <div class="card-body">
+                        <div id="greeks-output"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-8">
+                <div class="card mb-4">
+                    <div class="card-header">Black-Scholes Model Visualization</div>
+                    <div class="card-body">
+                        <div id="bsm-graph"></div>
+                        <label for="stock-price-slider">Adjust Stock Price:</label>
+                        <input type="range" id="stock-price-slider" min="50" max="150" step="1" value="100">
+                    </div>
+                </div>
+
+                <div class="card mb-4">
+                    <div class="card-header">Implied Volatility</div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="market-price">Market Price:</label>
+                            <input type="number" id="market-price" class="form-control" value="10" min="0" step="0.01">
+                        </div>
+                        <div class="form-group">
+                            <label for="option-type">Option Type:</label>
+                            <select id="option-type" class="form-control">
+                                <option value="C">Call</option>
+                                <option value="P">Put</option>
+                            </select>
+                        </div>
+                        <button id="calc-iv-button" class="btn btn-secondary mb-3">Calculate Implied Volatility</button>
+                        <div id="implied-volatility-output"></div>
+                    </div>
+                </div>
+
+                <div class="card mb-4">
+                    <div class="card-header">Sensitivity Analysis</div>
+                    <div class="card-body">
+                        <div id="sensitivity-graph"></div>
+                    </div>
+                </div>
+
+                <div class="card mb-4">
+                    <div class="card-header">Probability Distribution</div>
+                    <div class="card-body">
+                        <div id="pdf-cdf-graph"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Placeholder for JavaScript functionality
+        document.getElementById('calculate-button').addEventListener('click', function() {
+            // Implement Black-Scholes calculations here
+            alert('Calculation functionality not implemented in this static version.');
+        });
+
+        document.getElementById('calc-iv-button').addEventListener('click', function() {
+            // Implement implied volatility calculation here
+            alert('Implied volatility calculation not implemented in this static version.');
+        });
+
+        // Placeholder for graph creation
+        Plotly.newPlot('bsm-graph', [{x: [1, 2, 3, 4], y: [10, 15, 13, 17], type: 'scatter'}]);
+        Plotly.newPlot('sensitivity-graph', [{x: [1, 2, 3, 4], y: [10, 15, 13, 17], type: 'scatter'}]);
+        Plotly.newPlot('pdf-cdf-graph', [{x: [1, 2, 3, 4], y: [0.1, 0.2, 0.3, 0.4], type: 'scatter'}]);
+    </script>
+</body>
+</html>
