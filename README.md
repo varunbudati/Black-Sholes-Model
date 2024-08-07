@@ -1,14 +1,17 @@
 # Black-Scholes Option Pricing Model
+![chrome_0689IPcQEf](https://github.com/user-attachments/assets/37bd7c0b-dfcd-420b-aa2d-591b1fc38cdb)
 
 ## Description
 This project implements the Black-Scholes option pricing model in Python. It provides a comprehensive tool for calculating option prices, Greeks, and implied volatility for European-style options.
 
 ## Features
-- Calculate call and put option prices
-- Compute option Greeks (Delta, Gamma, Vega, Theta, Rho)
-- Calculate implied volatility
-- Visualize the implied volatility smile
-- User-friendly command-line interface for input
+- Calculate Call and Put option prices
+- Compute Greeks (Delta, Gamma, Vega, Theta, Rho)
+- Visualize option prices against stock price
+- Perform sensitivity analysis
+- Display probability distribution of stock price at maturity
+- Interactive UI with adjustable parameters
+- Dark mode interface
 
 ## Requirements
 - Python 3.7+
@@ -16,14 +19,50 @@ This project implements the Black-Scholes option pricing model in Python. It pro
 - Pandas
 - Matplotlib
 - SciPy
+- pip
 
-How this project was done:
-- Read Theory and learnt different python libraries from "Python for Data Analysis: Data Wrangling with pandas, NumPy, and Jupyter 3rd Edition"
-- Followed Black Sholes Model and understood core concepts of its usage
-- Tried to implement new methods of plotting into the project
-- Searched different repos when needed help in understanding core concepts
+## Usage
+[Click Here](https://varunbudati-black-sholes-model-black-scholes-streamlit-qc7aie.streamlit.app/)
+
+## How to Use
+1. Adjust the input parameters:
+   - Stock Price
+   - Strike Price
+   - Time to Maturity (in days)
+   - Risk-free Rate (%)
+   - Volatility (%)
+
+2. The app will automatically calculate and display:
+   - Option Prices (Call and Put)
+   - Greeks (Delta, Gamma, Vega, Theta, Rho)
+
+3. Explore different tabs for:
+   - Model Visualization
+   - Sensitivity Analysis
+   - Probability Distribution
+
+## Theory
+The Black-Scholes model, developed by Fischer Black and Myron Scholes in 1973, is a mathematical model for pricing European-style options. The model assumes that heavily traded asset prices follow a geometric Brownian motion with constant drift and volatility.
+
+Key assumptions of the model:
+- The option is European and can only be exercised at expiration
+- No dividends are paid out during the option's life
+- Markets are efficient (i.e., market movements cannot be predicted)
+- There are no transaction costs in buying the option
+- The risk-free rate and volatility of the underlying are known and constant
+- The returns on the underlying asset are normally distributed
+
+## Contributing
+Contributions to improve the calculator are welcome. Please follow these steps:
+1. Fork the repository
+2. Create a new branch (`git checkout -b feature-branch`)
+3. Make your changes and commit (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin feature-branch`)
+5. Create a new Pull Request
+
 
 ## Images
+
 
 ![image](https://github.com/user-attachments/assets/667b7d08-3021-4ae4-bf83-6521da13167a)
 
