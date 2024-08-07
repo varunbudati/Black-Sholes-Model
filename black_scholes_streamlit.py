@@ -139,7 +139,7 @@ def main():
             </a>
         </div>
         """
-    st.markdown(contact_html, unsafe_allow_html=True)
+        st.markdown(contact_html, unsafe_allow_html=True)
     display_contact_buttons()
     
     st.markdown("<h1 class='bold'>Black-Scholes Option's Pricing Calculator</h1>", unsafe_allow_html=True)
