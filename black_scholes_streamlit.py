@@ -130,7 +130,7 @@ def main():
                 GitHub
             </a>
             <a href="https://varunbudati.github.io/" target="_blank" class="contact-btn">
-                <svg xmlns="https://varunbudati.github.io/assets/images/varun-budati.jpeg" viewBox="0 0 24 24"><path d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></svg>
+                <svg xmlns="https://varunbudati.github.io/assets/images/logo.ico" viewBox="0 0 24 24"><path d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></svg>
                 Portfolio
             </a>
             <a href="https://www.linkedin.com/in/varun-budati/" target="_blank" class="contact-btn">
