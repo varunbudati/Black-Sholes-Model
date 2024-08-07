@@ -90,8 +90,8 @@ def main():
         }
         .contact-container {
             position: fixed;
-            top: 120px;
-            right: 10px;
+            top: 60px;
+            right: 20px;
             display: flex;
             gap: 10px;
             z-index: 1000;
