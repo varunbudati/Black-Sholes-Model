@@ -79,20 +79,6 @@ class BlackScholesModel:
 
 # Streamlit app
 def main():
-
-    def display_contact_buttons():
-        contact_html = """
-        <div class="contact-container">
-            <a href="https://github.com/yourusername" target="_blank" class="contact-btn" style="background-color:#24292e;">GitHub</a>
-            <a href="https://yourportfolio.com" target="_blank" class="contact-btn" style="background-color:#4CAF50;">Portfolio</a>
-            <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="contact-btn" style="background-color:#0077B5;">LinkedIn</a>
-        </div>
-        """
-        st.markdown(contact_html, unsafe_allow_html=True)
-
-    
-
-
     st.set_page_config(page_title="Black-Scholes Option's Pricing Calculator", layout="wide")
     st.markdown("""
         <style>
@@ -132,7 +118,15 @@ def main():
         </style>
         """, unsafe_allow_html=True)
 
-
+    def display_contact_buttons():
+        contact_html = """
+        <div class="contact-container">
+            <a href="https://github.com/yourusername" target="_blank" class="contact-btn" style="background-color:#24292e;">GitHub</a>
+            <a href="https://yourportfolio.com" target="_blank" class="contact-btn" style="background-color:#4CAF50;">Portfolio</a>
+            <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="contact-btn" style="background-color:#0077B5;">LinkedIn</a>
+        </div>
+        """
+        st.markdown(contact_html, unsafe_allow_html=True)
     display_contact_buttons()
     
     st.markdown("<h1 class='underline'>Black-Scholes Option's Pricing Calculator</h1>", unsafe_allow_html=True)
