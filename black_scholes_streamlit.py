@@ -79,9 +79,63 @@ class BlackScholesModel:
 
 # Streamlit app
 def main():
-    st.set_page_config(page_title="Black-Scholes Option's Pricing Calculator", layout="wide")
+
+    def display_contact_buttons():
+        contact_html = """
+        <div class="contact-container">
+            <a href="https://github.com/yourusername" target="_blank" class="contact-btn" style="background-color:#24292e;">GitHub</a>
+            <a href="https://yourportfolio.com" target="_blank" class="contact-btn" style="background-color:#4CAF50;">Portfolio</a>
+            <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="contact-btn" style="background-color:#0077B5;">LinkedIn</a>
+        </div>
+        """
+        st.markdown(contact_html, unsafe_allow_html=True)
+
     
-    st.title("Black-Scholes Option's Pricing Calculator")
+
+
+    st.set_page_config(page_title="Black-Scholes Option's Pricing Calculator", layout="wide")
+    st.markdown("""
+        <style>
+        .underline {
+            text-decoration: underline;
+            text-decoration-color: #4CAF50;
+            text-decoration-thickness: 4px;
+            padding-bottom: 10px;
+        }
+        .contact-container {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            gap: 10px;
+            z-index: 1000;
+        }
+        .contact-btn {
+            display: inline-block;
+            padding: 0.3em 0.6em;
+            margin: 0 0.1em 0.1em 0;
+            border: 0.16em solid rgba(255,255,255,0);
+            border-radius: 2em;
+            box-sizing: border-box;
+            text-decoration: none;
+            font-family: 'Roboto',sans-serif;
+            font-weight: 300;
+            font-size: 12px;
+            color: white;
+            text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+            text-align: center;
+            transition: all 0.2s;
+        }
+        .contact-btn:hover {
+            border-color: rgba(255,255,255,1);
+        }
+        </style>
+        """, unsafe_allow_html=True)
+
+
+    display_contact_buttons()
+    
+    st.markdown("<h1 class='underline'>Black-Scholes Option's Pricing Calculator</h1>", unsafe_allow_html=True)
 
     # Input parameters
     col1, col2, col3 = st.columns(3)
@@ -162,6 +216,7 @@ def main():
         fig.add_trace(go.Scatter(x=prices, y=cdf, mode='lines', name='CDF'))
         fig.update_layout(title='Probability Distribution of Stock Price at Maturity', xaxis_title='Stock Price', yaxis_title='Probability')
         st.plotly_chart(fig)
+
 
 if __name__ == "__main__":
     main()
