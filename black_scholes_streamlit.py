@@ -121,15 +121,15 @@ def main():
     def display_contact_buttons():
         contact_html = """
         <div class="contact-container">
-            <a href="https://github.com/yourusername" target="_blank" class="contact-btn" style="background-color:#24292e;">GitHub</a>
-            <a href="https://yourportfolio.com" target="_blank" class="contact-btn" style="background-color:#4CAF50;">Portfolio</a>
-            <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="contact-btn" style="background-color:#0077B5;">LinkedIn</a>
+            <a href="https://github.com/varunbudati" target="_blank" class="contact-btn" style="background-color:#24292e;">GitHub</a>
+            <a href="https://varunbudati.github.io/" target="_blank" class="contact-btn" style="background-color:#4CAF50;">Portfolio</a>
+            <a href="https://www.linkedin.com/in/varun-budati/" target="_blank" class="contact-btn" style="background-color:#0077B5;">LinkedIn</a>
         </div>
         """
         st.markdown(contact_html, unsafe_allow_html=True)
     display_contact_buttons()
     
-    st.markdown("<h1 class='underline'>Black-Scholes Option's Pricing Calculator</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 class='bold'>Black-Scholes Option's Pricing Calculator</h1>", unsafe_allow_html=True)
 
     # Input parameters
     col1, col2, col3 = st.columns(3)
